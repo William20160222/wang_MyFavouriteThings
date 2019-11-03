@@ -1,0 +1,48 @@
+
+
+</section>
+{{!-- <section id="section2" class="panel">panel 2</section> --}}
+<section id="section3" class="panel">
+    <h1 class="user-panel-heading">
+        My favorite three games!
+    </h1>
+
+    <p>
+        As a gamer, World of Warcraft, Overwatch and League of Legends are my three favorite games and the three best games I have ever played. The gameplay and game content of these three games are very creative. The game's graphics, special effects and story content are very shocking. Worth recommending.
+    </p>
+
+    <h4>Click on a team member below to learn more about them.</h4>
+
+    <div class="team">
+        <!-- loop through all our team members and put their info on the page -->
+        <!-- this is exactly like a forEach loop with plain JS -->
+        {{#each  people}}
+            <div class="user-panel">
+                <img class="u-avatar"  src="images/{{avatar}}" alt="avatar">
+
+                <a class="u-link" href="{{ID}}">
+                    See More Info
+                </a>
+
+                <h1>{{GameName}}</h1>
+                <h3>{{CompanyName}}</h3>
+                <h4>{{Language}}</h4>
+                <h5>{{GameType}}</h5>
+            </div>
+        {{/each}}
+        
+    </div>
+    </div>
+
+    <!-- this will be filled in on the client side when we render our AJAX data -->
+    <section class="lightbox">
+        <span class="close">x</span>
+        <div class="sidebar">
+            <img src="" alt="larger bio image">
+        </div>
+
+        <div class="lb-content">
+
+        </div>
+    </section>
+</section>
